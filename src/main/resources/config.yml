@@ -1,0 +1,16 @@
+# LessLaggyBoats configuration file
+
+# Occasionally teleport to the calculated position during travel
+teleport-during-travel: true
+
+# Teleport to the calculated position upon exiting the boat
+teleport-upon-exit: true
+
+# Teleportation Threshold (calculated distance)
+teleport-distance-threshold: 3.0
+
+# Also track unoccupied boats
+track-unoccupied-boats: false
+
+# Lag calculation method (false = milliseconds, true = nanoseconds)
+nanoseconds: true

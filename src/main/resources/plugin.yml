@@ -1,0 +1,29 @@
+name: LessLaggyBoats
+author: kpaulisse
+main: com.paulisse.bukkit.plugins.lesslaggyboats.LessLaggyBoats
+version: 0.0.1-SNAPSHOT
+description: Attempts to estimate the position of boats more accurately
+
+commands:
+  lesslaggyboats:
+    description: Manage Plugin
+    aliases: [llb]
+    usage: /lesslaggyboats {reload|enable|disable|set|config}
+    permission: lesslaggyboats.manageplugin
+  showlag:
+    description: Show current server lag (ticks per second)
+    usage: /showlag
+    permission: lesslaggyboats.showlag
+  listboats:
+    description: List all tracked boats
+    aliases: [boats]
+    usage: /listboats
+    permission: lesslaggyboats.listboats
+
+permissions:
+  lesslaggyboats.manageplugin:
+    description: Enable, disable, reload, or configure plugin
+  lesslaggyboats.showlag:
+    description: Display current ticks per seconds performance
+  lesslaggyboats.listboats:
+    description: Display list of boats currently being tracked
