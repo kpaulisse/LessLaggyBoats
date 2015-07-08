@@ -8,7 +8,8 @@ Author: [Kevin Paulisse](https://github.com/kpaulisse)
 
 Please report bugs or make suggestions: [Issue Tracker](https://github.com/kpaulisse/LessLaggyBoats/issues)
 
-Tested on: Spigot 1.8.7, Java 8
+Developed on: Spigot 1.8.7 + Java 8
+Lightly tested on: Spigot-1.7.9-R0.3 + Java 7
 
 ## Introduction
 

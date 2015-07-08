@@ -28,19 +28,20 @@ public class LagTracker extends ArrayList<Long> {
     private int tickCounter = 0;
 
     public Double getTPS() {
-        if (this.size() <= 5) {
-            return -1.0D;
-        }
-        Long difference = this.get(this.size() - 1) - this.get(0);
-        return ((double) this.size()) / (difference / (useNano ? 1000000000 : 1000));
+        return 20.0D / getCurrentLag();
     }
 
     public Double getCurrentLag() {
         if (this.size() <= 5) {
             return 1.0D;
         }
-        Long difference = this.get(this.size() - 1) - this.get(0);
-        Long timePerTick = difference / this.size();
+        int arraySize = this.size() <= tickTrackerSize ? this.size() : tickTrackerSize;
+        int lastElement = arraySize - 1;
+        if (lastElement <= 0) {
+            return 1.0D;
+        }
+        Long difference = this.get(lastElement) - this.get(0);
+        Long timePerTick = difference / arraySize;
         Long noLag = useNano ? 50000000L : 50L;
         if (timePerTick <= noLag) {
             return 1.0D;

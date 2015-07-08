@@ -1,7 +1,7 @@
 name: LessLaggyBoats
 author: kpaulisse
 main: com.paulisse.bukkit.plugins.lesslaggyboats.LessLaggyBoats
-version: 0.0.1-SNAPSHOT
+version: ${project.version}
 description: Attempts to estimate the position of boats more accurately
 
 commands:
